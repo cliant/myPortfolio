@@ -1,0 +1,29 @@
+/* src/components/Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: rgba(255, 255, 255, 0.2); 
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  margin: 20px 20px 0 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #222222; 
+}
+
+.nav a {
+  color: #222222;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
