@@ -1,5 +1,5 @@
 // src/pages/About.tsx
-import './About.css';
+import './about.css';
 
 function About() {
   return (

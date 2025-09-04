@@ -1,6 +1,6 @@
 // src/pages/Home.tsx
 import { useState, useEffect } from 'react';
-import './Home.css';
+import './home.css';
 
 function Home() {
   const [typedIntro, setTypedIntro] = useState("");

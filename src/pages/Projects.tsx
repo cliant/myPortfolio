@@ -1,6 +1,6 @@
 // src/pages/Projects.tsx
 import React, { useState } from 'react';
-import './Projects.css';
+import './projects.css';
 import hometryImage from '../assets/projects/hometry.jpg'; 
 import capstoneImage from '../assets/projects/capstone.png';
 import internImage from '../assets/projects/intern.png';
