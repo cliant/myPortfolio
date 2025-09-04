@@ -28,3 +28,37 @@
   font-size: 1.1em;
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* 헤더를 세로로 정렬 */
+    height: auto;
+    padding: 15px 20px;
+    align-items: flex-start;
+  }
+
+  .header-nav {
+    flex-direction: column; /* 메뉴 항목들을 세로로 정렬 */
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .header-nav li {
+    margin: 5px 0; /* 세로 간격 조절 */
+    font-size: 0.9em;
+  }
+  
+  .header-nav a {
+    font-size: 1em; /* 링크 텍스트 크기 조절 */
+  }
+
+  .header-logo {
+    font-size: 1.2em; /* 로고 크기 조절 */
+  }
+}
+
+
+
+
+
+

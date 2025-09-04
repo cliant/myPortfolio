@@ -63,3 +63,13 @@
   animation: fadeIn 1s ease-in, blink-caret .75s step-end infinite;
   vertical-align: middle; /* ✅ 수직 정렬을 가운데로 맞춤 */
 }
+
+@media (max-width: 768px) {
+  .animated-title {
+    font-size: 3em; /* 모바일용으로 폰트 크기 줄임 */
+  }
+
+  .profile p {
+    font-size: 1em; /* 프로필 폰트 크기 줄임 */
+  }
+}

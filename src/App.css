@@ -25,3 +25,9 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-osx-smoothing: grayscale;
 }
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    background-attachment: scroll; /* 모바일에서 고정 배경 해제 */
+  }
+}

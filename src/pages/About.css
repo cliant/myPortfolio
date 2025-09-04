@@ -128,3 +128,17 @@ li {
   margin: 10px 0;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .about-box {
+    padding: 25px; /* 모바일에서 패딩 줄임 */
+    font-size: 1em; /* 모바일에서 폰트 크기 줄임 */
+  }
+  .about-box h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .about-container {
+    padding-top: calc(20px + var(--header-height, 60px));
+  }
+}
