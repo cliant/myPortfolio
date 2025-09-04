@@ -1,0 +1,130 @@
+/* src/pages/About.css */
+
+.about-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px); /* 아래에서 100px 위로 시작 */
+    opacity: 0; /* 투명한 상태에서 시작 */
+  }
+  to {
+    transform: translateY(0); /* 원래 위치로 이동 */
+    opacity: 1; /* 불투명하게 변함 */
+  }
+}
+
+.about-box {
+  width: 80%;
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  padding: 50px 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+  height: 70vh; 
+  overflow-y: auto; 
+  animation: slideUp 1s ease-out forwards; 
+}
+
+
+.profile-and-experience {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section {
+  color: #222222;
+  text-align: left;
+  flex: 1;
+  flex-basis: auto; 
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 200px;
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  background-image: url("../assets/about/profile.jpg");
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background-size: cover;
+  background-position: center top;
+}
+
+.certifications-section h2, 
+.experience-section h2, 
+.skills-section h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  color: #222222; 
+}
+
+.experience-section li::before,
+.certifications-section li::before {
+    content: '• '; 
+    color: #222222;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* ✅ Skills 섹션 배지들을 위한 스타일 */
+/* 그리드 컨테이너를 한 줄 레이아웃에 적합하게 수정 */
+.skills-grid {
+  display: flex; /* Flexbox로 변경 */
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-category h3 {
+  font-size: 1em;
+  color: #222222;
+}
+
+/* ✅ 배지 이미지 컨테이너 스타일 - 한 줄로 표시 */
+.badges-container {
+  display: flex;
+  flex-wrap: nowrap; /* 배지를 한 줄에 강제로 표시 */
+  gap: 10px; /* 배지 사이의 간격 */
+  overflow-x: auto; /* 내용이 넘치면 가로 스크롤바 생성 */
+}
+
+/* ✅ 배지 이미지 자체에 대한 스타일 */
+.badges-container img {
+  height: 30px; 
+}
+
+.divider {
+  border: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  width: 100%;
+}

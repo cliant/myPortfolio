@@ -1,0 +1,65 @@
+/* src/pages/Home.css */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ✅ 애니메이션을 위한 키프레임 정의 */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; } /* 커서 색상 */
+}
+
+/* ✅ "Enjoy Life" 텍스트 애니메이션 */
+.animated-title {
+  font-size: 8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  animation: slideIn 1s ease-out; /* 애니메이션 적용 */
+}
+
+.profile {
+  margin-top: 10px;
+}
+
+.profile p {
+  margin: 5px 0;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+}
+
+/* ✅ 타이핑 효과 - 수직 정렬 수정 */
+.typed-effect {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap; /* 줄바꿈 방지 */
+  overflow: hidden; /* 글자가 나타나는 효과 */
+  animation: fadeIn 1s ease-in, blink-caret .75s step-end infinite;
+  vertical-align: middle; /* ✅ 수직 정렬을 가운데로 맞춤 */
+}

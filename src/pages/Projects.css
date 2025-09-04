@@ -1,0 +1,168 @@
+/* src/pages/Projects.css */
+
+/* Projects 메인 콘텐츠 컨테이너 */
+.projects-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 50px 20px;
+  padding-top: calc(50px + var(--header-height, 60px));
+  background-color: rgba(255, 255, 255, 0.1); 
+  animation: slideUp 1s ease-out forwards; 
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px); /* 아래에서 100px 위로 시작 */
+    opacity: 0; /* 투명한 상태에서 시작 */
+  }
+  to {
+    transform: translateY(0); /* 원래 위치로 이동 */
+    opacity: 1; /* 불투명하게 변함 */
+  }
+}
+
+
+.projects-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  max-height: calc(100vh - var(--header-height, 60px) - 100px); /* 화면 높이에 따라 그리드 높이 제한 */
+  overflow-y: auto; 
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit:fill;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.project-info {
+  padding: 20px;
+  color: #222222;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-info h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.project-info p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.view-details-button {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  font-size: 0.9em;
+}
+
+.view-details-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ✅ 모달 오버레이 스타일 (최상단에 위치) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* ✅ 헤더보다 위에 오도록 가장 높은 값으로 설정 */
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh; /* ✅ 모달 내용의 최대 높이를 화면 높이에 비례하여 설정 */
+  overflow-y: auto; /* ✅ 내용이 넘칠 때만 스크롤바가 생깁니다. */
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  color: #222222;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.modal-content strong {
+  color: #333333;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2.5em;
+  cursor: pointer;
+  color: #333333;
+}
+
+.modal-close-button:hover {
+  color: #000000;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .projects-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+}
