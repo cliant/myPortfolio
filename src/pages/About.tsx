@@ -28,7 +28,8 @@ function About() {
           <h2>Certifications</h2>
           <ul>
             <li>TOEIC(800, 2024.02)</li>
-            <li>정보처리기사()</li>
+            <li>TOPCIT(800, 맞고싶음)</li>
+            <li>정보처리기사(딸거임)</li>
           </ul>
         </div>
 

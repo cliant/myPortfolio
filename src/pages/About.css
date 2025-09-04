@@ -36,8 +36,6 @@
 }
 
 
-
-
 .profile-and-experience {
   display: flex;
   gap: 40px;
@@ -62,9 +60,11 @@
 .profile-image {
   width: 180px;
   height: 180px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-image: url("../assets/about/profile.jpg");
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.8);
+  background-size: cover;
+  background-position: center top;
 }
 
 .certifications-section h2, 
