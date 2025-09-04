@@ -1,6 +1,5 @@
 // src/pages/Projects.tsx
 import React, { useState } from 'react';
-import Header from '../components/Header';
 import './Projects.css';
 import hometryImage from '../assets/projects/hometry.jpg'; 
 import capstoneImage from '../assets/projects/capstone.png';
