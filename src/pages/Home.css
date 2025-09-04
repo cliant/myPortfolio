@@ -1,0 +1,27 @@
+/* src/pages/Home.css */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.profile {
+  margin-top: 10px;
+}
+
+.profile p {
+  margin: 5px 0;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+}

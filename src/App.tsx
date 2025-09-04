@@ -1,20 +1,22 @@
+// src/App.tsx
 import './App.css';
 import React from 'react';
-import Header from './components/Header'; 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
   return (
-    <div className="portfolio-container">
-      <Header /> {}
-      <main className="main-content">
-        <h1 className="title">Enjoy Life</h1>
-        <div className="profile">
-          <p>👤 J.H.Park / Developer & Traveler</p>
-          <p>📞 010-7712-9162</p>
-          <p>✉️ uamy2222@naver.com</p>
-        </div>
-      </main>
-    </div>
+    <BrowserRouter>
+      <div className="portfolio-container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
