@@ -1,6 +1,6 @@
 // src/components/header.tsx
 import { Link } from 'react-router-dom'; // Link 컴포넌트 import
-import './header.css';
+import './Header.css';
 
 function Header() {
   return (
