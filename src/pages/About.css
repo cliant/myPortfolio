@@ -8,6 +8,17 @@
   padding: 100px 20px;
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(100px); /* 아래에서 100px 위로 시작 */
+    opacity: 0; /* 투명한 상태에서 시작 */
+  }
+  to {
+    transform: translateY(0); /* 원래 위치로 이동 */
+    opacity: 1; /* 불투명하게 변함 */
+  }
+}
+
 .about-box {
   width: 80%;
   max-width: 1000px;
@@ -21,7 +32,11 @@
   gap: 30px; 
   height: 70vh; 
   overflow-y: auto; 
+  animation: slideUp 1s ease-out forwards; 
 }
+
+
+
 
 .profile-and-experience {
   display: flex;

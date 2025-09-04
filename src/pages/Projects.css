@@ -9,7 +9,20 @@
   padding: 50px 20px;
   padding-top: calc(50px + var(--header-height, 60px));
   background-color: rgba(255, 255, 255, 0.1); 
+  animation: slideUp 1s ease-out forwards; 
 }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px); /* 아래에서 100px 위로 시작 */
+    opacity: 0; /* 투명한 상태에서 시작 */
+  }
+  to {
+    transform: translateY(0); /* 원래 위치로 이동 */
+    opacity: 1; /* 불투명하게 변함 */
+  }
+}
+
 
 .projects-grid-container {
   display: grid;
