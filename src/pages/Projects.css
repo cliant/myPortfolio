@@ -23,7 +23,6 @@
   }
 }
 
-
 .projects-grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -71,7 +70,6 @@
 .project-info h3 {
   font-size: 1.5em;
   margin-top: 0;
-  margin-bottom: 10px;
   font-weight: bold;
 }
 
@@ -167,4 +165,22 @@
   .project-card {
     padding: 20px;
   }
+}
+
+/* 추가된 CSS */
+.top-content {
+  margin-bottom: 10px; /* 상단 콘텐츠와 하단 콘텐츠 사이의 간격 */
+}
+
+/* 아래는 기존 스타일을 그대로 사용하므로 추가할 필요는 없습니다. */
+.project-meta {
+  display: flex;
+  flex-direction: column; 
+  gap: 5px; 
+  margin-top: 10px;
+  font-size: 0.9em; 
+}
+
+.project-links {
+  margin-top: auto; /* 이 속성은 이제 필요 없습니다. */
 }
