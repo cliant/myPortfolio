@@ -8,7 +8,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCalendarAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 
 interface ProjectModalProps {
-  project: typeof projectsData[0]; // import 한 데이터 타입 사용
+  project: typeof projectsData[0]; 
   onClose: () => void;
 }
 
@@ -18,23 +18,23 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close-button" onClick={onClose}>&times;</button>
         <h2>{project.title}</h2>
-        <p><strong>기간:</strong> {project.duration}</p>
-        <p><strong>프로젝트 내용:</strong> {project.details}</p>
-        <p><strong>사용한 기술 스택:</strong> {project.techStack.join(', ')}</p>
+        <p><strong>🗓️ 기간:</strong> {project.duration}</p>
+        <p><strong>📝 프로젝트 내용:</strong> {project.details}</p>
+        <p><strong>🗂️ 기술 스택:</strong> {project.techStack.join(', ')}</p>
 
-        <h3>주요 트러블슈팅</h3>
+        <h3>🎯 주요 트러블슈팅</h3>
         <div className="troubleshooting-section">
           {project.troubleshooting.map((item, index) => (
             <div key={index} className="troubleshooting-item">
-              <h4>문제 {index + 1}: {item.issue}</h4>
-              <p><strong>원인:</strong> {item.cause}</p>
-              <p><strong>해결:</strong> {item.solution}</p>
+              <h4>🚨 문제 {index + 1}: {item.issue}</h4>
+              <p><strong>⚠️ 원인:</strong> {item.cause}</p>
+              <p><strong>💡 해결:</strong> {item.solution}</p>
             </div>
           ))}
         </div>
 
-        {project.role && <p><strong>담당 역할:</strong> {project.role}</p>}
-        {project.link && <p><strong>링크:</strong> <a href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a></p>}
+        {project.role && <p><strong>👤 담당 역할:</strong> {project.role}</p>}
+        {project.link && <p><strong>🔗 링크:</strong> <a href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a></p>}
       </div>
     </div>
   );

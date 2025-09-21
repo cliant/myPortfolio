@@ -10,7 +10,7 @@ function About() {
             <div className="profile-image"></div>
           </div>
           <div className="about-section experience-section">
-            <h2>Experience</h2>
+            <h2>Experiences</h2>
             <ul>
               <li>전남대학교 소프트웨어공학과 (2020.03 ~ 2026.02)</li>
               <li>카카오 테크 캠퍼스 백엔드 과정 수료 (2024.03 ~ 2024.11)</li>
@@ -26,8 +26,6 @@ function About() {
           <h2>Certifications</h2>
           <ul>
             <li>TOEIC(800, 2024.02)</li>
-            <li>TOPCIT(800, 맞고싶음)</li>
-            <li>정보처리기사(딸거임)</li>
           </ul>
         </div>
 
