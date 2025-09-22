@@ -39,7 +39,6 @@
   font-size: 8em;
   font-weight: bold;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
   animation: slideIn 1s ease-out; /* 애니메이션 적용 */
 }
 
@@ -50,7 +49,6 @@
 .profile p {
   margin: 5px 0;
   font-size: 1.5em;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
   font-weight: bold;
 }
 
