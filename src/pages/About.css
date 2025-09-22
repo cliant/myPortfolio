@@ -37,6 +37,7 @@
 
 
 .profile-and-experience {
+  /* 모바일에서 세로로 정렬되도록 flex-direction을 변경 */
   display: flex;
   gap: 40px;
   justify-content: center;
@@ -97,9 +98,8 @@ li {
 }
 
 /* ✅ Skills 섹션 배지들을 위한 스타일 */
-/* 그리드 컨테이너를 한 줄 레이아웃에 적합하게 수정 */
 .skills-grid {
-  display: flex; /* Flexbox로 변경 */
+  display: flex; 
   flex-direction: column;
   gap: 20px;
 }
@@ -109,17 +109,18 @@ li {
   color: #222222;
 }
 
-/* ✅ 배지 이미지 컨테이너 스타일 - 한 줄로 표시 */
 .badges-container {
   display: flex;
-  flex-wrap: nowrap; /* 배지를 한 줄에 강제로 표시 */
-  gap: 10px; /* 배지 사이의 간격 */
-  overflow-x: auto; /* 내용이 넘치면 가로 스크롤바 생성 */
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 5px; /* 스크롤바 공간 확보 */
 }
 
 /* ✅ 배지 이미지 자체에 대한 스타일 */
 .badges-container img {
   height: 30px; 
+  flex-shrink: 0; /* 배지가 줄어들지 않도록 설정 */
 }
 
 .divider {
@@ -128,17 +129,77 @@ li {
   margin: 10px 0;
   width: 100%;
 }
-
 @media (max-width: 768px) {
   .about-box {
-    padding: 25px; /* 모바일에서 패딩 줄임 */
-    font-size: 1em; /* 모바일에서 폰트 크기 줄임 */
+    width: 95%; /* 모바일에서 좌우 여백을 더 줄여 화면을 넓게 활용 */
+    padding: 30px 20px; /* 패딩을 조정하여 답답해 보이지 않게 함 */
+    height: auto; /* 내용 길이에 맞춰 높이 자동 조절 */
+    max-height: 85vh; /* 최대 높이 설정하여 너무 길어지지 않게 함 */
   }
-  .about-box h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+  
+  /* ✅ 프로필과 경력 섹션을 세로로 정렬, 여백과 간격을 조정 */
+  .profile-and-experience {
+    flex-direction: column;
+    gap: 25px; /* 세로 간격을 조금 더 넓힘 */
   }
-  .about-container {
-    padding-top: calc(20px + var(--header-height, 60px));
+
+  /* ✅ 프로필 이미지를 중앙에 배치하고 크기 조정 */
+  .profile-image-container {
+    flex: none; 
+    width: 100%;
+    margin-bottom: 10px; /* 프로필 사진 아래 간격 추가 */
   }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px; /* 이미지 크기를 줄여 깔끔하게 보이도록 함 */
+  }
+
+  /* ✅ 모든 텍스트 정렬을 통일 */
+  .about-section {
+    text-align: left; /* 모든 섹션을 왼쪽 정렬로 통일하여 정돈된 느낌을 줌 */
+  }
+
+  .about-section h2 {
+    font-size: 1.6em; /* 모바일에서 제목 크기 약간 줄임 */
+    margin-bottom: 10px;
+  }
+  
+  li {
+    font-size: 1em; /* 목록 폰트 크기 조정 */
+  }
+
+  .skills-grid {
+    display: flex; 
+    flex-direction: column;
+    gap: 20px;
+    /* ✅ 자식 요소들이 넘칠 수 있도록 명확한 너비를 제공합니다. */
+    width: 100%;
+  }
+
+  /* ✅ 스킬 카테고리 자체도 가로 스크롤을 방지하도록 설정 */
+  .skill-category {
+    max-width: 100%;
+  }
+
+  .badges-container {
+    /* 기존 코드와 동일 */
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    /* ✅ 이 부분이 핵심입니다. */
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  /* ✅ 스킬 배지 컨테이너의 스크롤바 숨기기 */
+  .badges-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .badges-container::-webkit-scrollbar {
+    display: none;
+  }
+
 }
