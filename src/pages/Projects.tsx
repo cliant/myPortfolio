@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Projects.css';
 
-import projectsData from '../data/projectsData';
+import projectsData from '../data/ProjectsData';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
