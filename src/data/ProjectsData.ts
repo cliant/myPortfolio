@@ -65,7 +65,7 @@ const projectsData: Project[] = [
         solution: "주요 테이블에 대해 member_id, isDeprecated(논리 삭제 여부) 컬럼을 기준으로 인덱스를 적용하여 조회 성능을 최적화했습니다. 다만, 실제 대규모 트래픽 환경에서 부하 테스트는 진행하지 못했으며, 추후에는 JMeter와 같은 툴을 활용하여 성능 검증까지 해보고자 합니다."
 },
     ],
-    role: "백엔드 API 구성, DB설계 및 CRUD 구현",
+    role: "백엔드 일기, 메인페이지, 태그 API 구성 및 SSR을 활용한 관리자 페이지 구현",
     link: "https://github.com/kakao-tech-campus-2nd-step3/Team17_BE"
   },
   {
@@ -83,7 +83,7 @@ const projectsData: Project[] = [
           solution: "OpenWeather API 연동은 동기 방식으로 구현하여 실시간 데이터의 무결성을 확보했습니다. Google Gemini API 연동은 모든 유저에 대해 비동기 방식으로 구현하여 프로그램 효율성을 높였습니다."
         },
     ],
-    role: "백엔드 API 구성, DB설계 및 CRUD 구현, 미세먼지 + 자외선 페이지 개발",
+    role: "백엔드 예보 관련 API 구성, 외부 Openweather API 연동 , 미세먼지 + 자외선 페이지 개발",
     link: "https://github.com/orgs/JNU-SW-Capstone-Team11-CAPSROCK/repositories"
   },
   {
@@ -106,7 +106,7 @@ const projectsData: Project[] = [
           solution: "수액 모니터링 사이트에서 불안정한 데이터 수신 문제를 해결하기 위해 기기 전송 주기를 조정하고, 틱카운터 기반으로 수액 속도를 측정하도록 구현했습니다. 이를 통해 기기 전송 주기는 15s, 30s, 45s, 60s 중 45s가 가장 안정적인 유속을 측정할 수 있었습니다."
         }
     ],
-    role: "백엔드 API 구성, 백엔드-기기 연결",
+    role: "백엔드 총괄 및 API 구성, 백엔드-기기 연결",
     link: "https://github.com/SSTK-INTERN/new-web-BE"
   },
   {
