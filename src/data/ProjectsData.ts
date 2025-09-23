@@ -65,7 +65,7 @@ const projectsData: Project[] = [
         solution: "주요 테이블에 대해 member_id, isDeprecated(논리 삭제 여부) 컬럼을 기준으로 인덱스를 적용하여 조회 성능을 최적화했습니다. 다만, 실제 대규모 트래픽 환경에서 부하 테스트는 진행하지 못했으며, 추후에는 JMeter와 같은 툴을 활용하여 성능 검증까지 해보고자 합니다."
 },
     ],
-    role: "백엔드 일기, 메인페이지, 태그 API 구성 및 SSR을 활용한 관리자 페이지 구현",
+    role: "백엔드 일기, 메인페이지, 태그 API 구성 및 SSR 기반 관리자 페이지 구현",
     link: "https://github.com/kakao-tech-campus-2nd-step3/Team17_BE"
   },
   {
