@@ -26,6 +26,7 @@ function About() {
           <h2>Certifications</h2>
           <ul>
             <li>TOEIC(800, 2024.02)</li>
+            <li>정보처리기사(2025.12.24)</li>
           </ul>
         </div>
 
