@@ -2,22 +2,22 @@
 .projects-content {
   flex-grow: 1;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   padding: 50px 20px;
   padding-top: calc(50px + var(--header-height, 60px));
-  background-color: rgba(255, 255, 255, 0.1); 
-  animation: slideUp 1s ease-out forwards; 
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: slideUp 1s ease-out forwards;
 }
 
 @keyframes slideUp {
   from {
-    transform: translateY(100px); /* 아래에서 100px 위로 시작 */
-    opacity: 0; /* 투명한 상태에서 시작 */
+    transform: translateY(100px);
+    opacity: 0;
   }
   to {
-    transform: translateY(0); /* 원래 위치로 이동 */
-    opacity: 1; /* 불투명하게 변함 */
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -28,7 +28,7 @@
   max-width: 1200px;
   width: 100%;
   max-height: calc(100vh - var(--header-height, 60px) - 100px);
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 .project-card {
@@ -51,7 +51,7 @@
 .project-image {
   width: 100%;
   height: 200px;
-  object-fit:fill;
+  object-fit: fill;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -73,7 +73,6 @@
   font-size: 1em;
   line-height: 1.5;
   margin-bottom: 15px;
-  /* 설명이 2줄을 넘지 않도록 제한하여 카드 높이 통일 */
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -81,7 +80,7 @@
 }
 
 .bottom-content {
-  margin-top: auto; /* 핵심 변경: 하단 콘텐츠를 항상 아래에 위치시킴 */
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -91,7 +90,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  font-size: 0.9em; 
+  font-size: 0.9em;
 }
 
 .project-links a {
@@ -125,8 +124,7 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-/* ✅ 모달 오버레이 스타일 (최상단에 위치) */
+/* ===== 모달 ===== */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -141,51 +139,145 @@
 }
 
 .modal-content {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
-  padding: 30px;
+  padding: 36px 32px;
   width: 90%;
   max-width: 700px;
-  max-height: 65vh; 
-  overflow-y: auto; 
+  max-height: 65vh;
+  overflow-y: auto;
   box-shadow: 0 8px 50px rgba(0, 0, 0, 0.3);
   position: relative;
   color: #222222;
 }
 
 .modal-content h2 {
-  font-size: 2em;
+  font-size: 1.8em;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   font-weight: bold;
+  padding-right: 40px; /* 닫기 버튼과 겹치지 않도록 */
 }
 
-.modal-content p {
+.modal-duration {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* 섹션 단위 스타일 */
+.modal-section {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.modal-section:first-of-type {
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.modal-section h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 0;
   margin-bottom: 10px;
+  color: #111;
+}
+
+.modal-section p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 0.97em;
+  color: #333;
+}
+
+/* 구현 내용 bullet list */
+.implementations-list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.implementations-list li {
+  font-size: 0.95em;
   line-height: 1.6;
+  color: #333;
 }
 
-.modal-content .troubleshooting-item {
-  margin-top: 7%;
+/* 기술 스택 뱃지 */
+.tech-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
 }
 
+.tech-badge {
+  background-color: rgba(0, 0, 0, 0.07);
+  color: #333;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
 
-.modal-content h3 {
-  font-size: 1.5em;
-  margin-top: 5%;
+/* 트러블슈팅 */
+.troubleshooting-item {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+}
+
+.troubleshooting-item:first-child {
+  margin-top: 0;
+}
+
+.troubleshooting-item h4 {
+  font-size: 1em;
   font-weight: bold;
+  margin: 0 0 8px 0;
+  color: #222;
 }
 
-.modal-content h4 {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+.troubleshooting-item p {
+  margin: 4px 0 0 0;
+  font-size: 0.93em;
+  line-height: 1.6;
+  color: #444;
+}
+
+.troubleshooting-item strong {
+  color: #333;
+}
+
+/* GitHub 링크 버튼 */
+.modal-link-section {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.modal-github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9em;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.modal-content strong {
-  color: #333333;
+.modal-github-link:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* 닫기 버튼 */
 .modal-close-button {
   position: absolute;
   top: 15px;
@@ -195,6 +287,7 @@
   font-size: 2.5em;
   cursor: pointer;
   color: #333333;
+  line-height: 1;
 }
 
 .modal-close-button:hover {
@@ -205,5 +298,9 @@
   .projects-grid-container {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .modal-content {
+    padding: 24px 20px;
   }
 }
