@@ -10,12 +10,12 @@
 
 @keyframes slideUp {
   from {
-    transform: translateY(100px); /* 아래에서 100px 위로 시작 */
-    opacity: 0; /* 투명한 상태에서 시작 */
+    transform: translateY(100px);
+    opacity: 0;
   }
   to {
-    transform: translateY(0); /* 원래 위치로 이동 */
-    opacity: 1; /* 불투명하게 변함 */
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -29,15 +29,13 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 30px; 
-  height: 70vh; 
-  overflow-y: auto; 
-  animation: slideUp 1s ease-out forwards; 
+  gap: 30px;
+  height: 70vh;
+  overflow-y: auto;
+  animation: slideUp 1s ease-out forwards;
 }
 
-
 .profile-and-experience {
-  /* 모바일에서 세로로 정렬되도록 flex-direction을 변경 */
   display: flex;
   gap: 40px;
   justify-content: center;
@@ -48,7 +46,7 @@
   color: #222222;
   text-align: left;
   flex: 1;
-  flex-basis: auto; 
+  flex-basis: auto;
 }
 
 .profile-image-container {
@@ -68,21 +66,22 @@
   background-position: center top;
 }
 
-.certifications-section h2, 
-.experience-section h2, 
-.skills-section h2 {
+.certifications-section h2,
+.experience-section h2,
+.skills-section h2,
+.introduce-section h2 {
   font-size: 1.8em;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #222222; 
+  color: #222222;
 }
 
 .experience-section li::before,
 .certifications-section li::before {
-    content: '• '; 
-    color: #222222;
-    font-size: 1.2em;
-    margin-right: 5px;
+  content: '• ';
+  color: #222222;
+  font-size: 1.2em;
+  margin-right: 5px;
 }
 
 ul {
@@ -96,9 +95,62 @@ li {
   font-weight: bold;
 }
 
-/* ✅ Skills 섹션 배지들을 위한 스타일 */
+/* ===== Introduce �뱀뀡 ===== */
+.introduce-summary {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.introduce-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-left: 0;
+}
+
+.introduce-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 1em;
+  padding: 14px 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  border-left: 3px solid rgba(0, 0, 0, 0.25);
+}
+
+/* introduce ��ぉ�� bullet �④� */
+.introduce-list li::before {
+  content: none;
+}
+
+.introduce-keyword {
+  font-size: 0.95em;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 2px;
+}
+
+.introduce-desc {
+  font-size: 0.92em;
+  color: #333;
+  line-height: 1.65;
+  font-weight: normal;
+}
+
+.introduce-desc strong {
+  color: #111;
+  font-weight: bold;
+}
+
+/* ===== Skills �뱀뀡 ===== */
 .skills-grid {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   gap: 20px;
 }
@@ -106,6 +158,7 @@ li {
 .skill-category h3 {
   font-size: 1em;
   color: #222222;
+  margin-bottom: 8px;
 }
 
 .badges-container {
@@ -113,13 +166,12 @@ li {
   flex-wrap: nowrap;
   gap: 10px;
   overflow-x: auto;
-  padding-bottom: 5px; /* 스크롤바 공간 확보 */
+  padding-bottom: 5px;
 }
 
-/* ✅ 배지 이미지 자체에 대한 스타일 */
 .badges-container img {
-  height: 30px; 
-  flex-shrink: 0; /* 배지가 줄어들지 않도록 설정 */
+  height: 30px;
+  flex-shrink: 0;
 }
 
 .divider {
@@ -128,71 +180,65 @@ li {
   margin: 10px 0;
   width: 100%;
 }
+
 @media (max-width: 768px) {
   .about-box {
-    width: 95%; /* 모바일에서 좌우 여백을 더 줄여 화면을 넓게 활용 */
-    padding: 30px 20px; /* 패딩을 조정하여 답답해 보이지 않게 함 */
-    height: auto; /* 내용 길이에 맞춰 높이 자동 조절 */
-    max-height: 85vh; /* 최대 높이 설정하여 너무 길어지지 않게 함 */
+    width: 95%;
+    padding: 30px 20px;
+    height: auto;
+    max-height: 85vh;
   }
-  
-  /* ✅ 프로필과 경력 섹션을 세로로 정렬, 여백과 간격을 조정 */
+
   .profile-and-experience {
     flex-direction: column;
-    gap: 25px; /* 세로 간격을 조금 더 넓힘 */
+    gap: 25px;
   }
 
-  /* ✅ 프로필 이미지를 중앙에 배치하고 크기 조정 */
   .profile-image-container {
-    flex: none; 
+    flex: none;
     width: 100%;
-    margin-bottom: 10px; /* 프로필 사진 아래 간격 추가 */
+    margin-bottom: 10px;
   }
-  
+
   .profile-image {
     width: 120px;
-    height: 120px; /* 이미지 크기를 줄여 깔끔하게 보이도록 함 */
+    height: 120px;
   }
 
-  /* ✅ 모든 텍스트 정렬을 통일 */
   .about-section {
-    text-align: left; /* 모든 섹션을 왼쪽 정렬로 통일하여 정돈된 느낌을 줌 */
+    text-align: left;
   }
 
   .about-section h2 {
-    font-size: 1.6em; /* 모바일에서 제목 크기 약간 줄임 */
+    font-size: 1.6em;
     margin-bottom: 10px;
   }
-  
+
   li {
-    font-size: 1em; /* 목록 폰트 크기 조정 */
+    font-size: 1em;
+  }
+
+  .introduce-list li {
+    padding: 12px 14px;
   }
 
   .skills-grid {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     gap: 20px;
-    /* ✅ 자식 요소들이 넘칠 수 있도록 명확한 너비를 제공합니다. */
     width: 100%;
   }
 
-  /* ✅ 스킬 카테고리 자체도 가로 스크롤을 방지하도록 설정 */
   .skill-category {
     max-width: 100%;
   }
 
   .badges-container {
-    /* 기존 코드와 동일 */
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
-    /* ✅ 이 부분이 핵심입니다. */
     overflow-x: auto;
     padding-bottom: 5px;
-  }
-
-  /* ✅ 스킬 배지 컨테이너의 스크롤바 숨기기 */
-  .badges-container {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
@@ -200,5 +246,4 @@ li {
   .badges-container::-webkit-scrollbar {
     display: none;
   }
-
 }

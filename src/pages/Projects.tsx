@@ -40,7 +40,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
         {/* 구현 내용 */}
         <section className="modal-section">
-          <h3>🛠️ 주요 구현 내용</h3>
+          <h3>🛠️ 구현 내용</h3>
           <ul className="implementations-list">
             {project.implementations.map((item, index) => (
               <li key={index}>{item}</li>
@@ -102,7 +102,14 @@ const Projects: React.FC = () => {
     <main className="projects-content">
       <div className="projects-grid-container">
         {projectsData.map((project) => (
-          <div key={project.id} className="project-card" onClick={() => openModal(project)}>
+          <div
+            key={project.id}
+            className={`project-card${project.isMain ? ' project-card--main' : ''}`}
+            onClick={() => openModal(project)}
+          >
+            {project.isMain && (
+              <div className="main-project-badge">🔥 메인 프로젝트</div>
+            )}
             <img src={project.image} alt={project.title} className="project-image" />
             <div className="project-info">
               <div className="top-content">
