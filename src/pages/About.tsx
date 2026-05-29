@@ -47,7 +47,7 @@ function About() {
             <li>
               <span className="introduce-keyword">성능은 측정하고, 개선은 수치로 말합니다</span>
               <span className="introduce-desc">
-                k6 부하 테스트로 메인페이지 응답 병목(avg 202ms)을 확인하고, 복합 인덱스와 커서 기반 페이징을 단계적으로 적용해 avg 48ms로 76% 개선했습니다. 
+                k6 부하 테스트로 메인페이지 응답 병목(avg 202ms)을 확인하고, 복합 인덱스와 커서 기반 페이징을 단계적으로 적용해 avg 48ms로 76% 개선했습니다.
               </span>
             </li>
             <li>
@@ -84,13 +84,13 @@ function About() {
                 <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot Badge" />
                 <img src="https://img.shields.io/badge/Spring%20Data%20JPA-6DB33F?style=for-the-badge&logo=springdata&logoColor=white" alt="Spring Data JPA Badge" />
                 <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT Badge" />
+                <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js Badge" />
               </div>
             </div>
             <div className="skill-category">
               <h3>Database</h3>
               <div className="badges-container">
                 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Badge" />
-                <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis Badge" />
               </div>
             </div>
             <div className="skill-category">
@@ -109,6 +109,8 @@ function About() {
                 <img src="https://img.shields.io/badge/k6-7D64FF?style=for-the-badge&logo=k6&logoColor=white" alt="k6 Badge" />
                 <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" alt="Notion Badge" />
                 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma Badge" />
+                <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack Badge" />
+                <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman Badge" />
               </div>
             </div>
           </div>
