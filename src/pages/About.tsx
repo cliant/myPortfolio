@@ -29,7 +29,7 @@ function About() {
         <div className="about-section introduce-section">
           <h2>Introduce</h2>
           <p className="introduce-summary">
-            "동작하는 코드"가 아닌 "설명할 수 있는 구조"를 만드는 백엔드 개발자입니다.
+            "동작하는 코드"가 아닌 "설명할 수 있는 구조"를 만드는 개발자입니다.
           </p>
           <ul className="introduce-list">
             <li>
